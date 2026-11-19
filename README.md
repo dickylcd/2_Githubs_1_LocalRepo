@@ -1,4 +1,5 @@
 ## Goal and safety model
+While you've local repo code (e.g. IaC code) and willing to host at two different Github repos (e.g. Personal and Office). You can follow below steps to achieve this goal.
 
 Your personal GitHub repository is already synchronized with local `IaC_Surce` and is the source of truth. You will make a backup, scan the full local Git history for secrets, then replace **only the office repository’s target branch** with the personal branch using a narrowly scoped `--force-with-lease` push. A mirror clone preserves repository history and can be restored by pushing it back to a remote. [docs-internal.github](https://docs-internal.github.com/en/repositories/archiving-a-github-repository/backing-up-a-repository)
 
